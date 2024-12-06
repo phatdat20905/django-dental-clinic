@@ -5,3 +5,5 @@ from django.http import HttpResponse
 def homepage(request):
     return render(request, 'website/home.html')
 
+def login(request):
+    return render(request, 'website/login.html')

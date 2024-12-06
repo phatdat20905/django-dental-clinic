@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url("images/bg.jpg") #6e7089 no-repeat center;
+  background: #6e7089 no-repeat center;
 }
 
 .clinic-container {
@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url("images/bg.jpg") #999ddc no-repeat center;
+  background: #999ddc no-repeat center;
 }
 
 
@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url("images/bg.jpg") #030728 no-repeat center;
+  background: #030728 no-repeat center;
 }
 
 .title {
