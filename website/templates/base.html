@@ -11,6 +11,19 @@
     <title>Nha khoa</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon -->
+    <!-- <link href="{% static 'website/img/favicon.ico' %}" rel="icon"> -->
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
     <!--css-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -18,7 +31,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{% static 'website/css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/css/home.css' %}" />
 
     <!--js-->
     <script
@@ -37,6 +53,7 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    
   </head>
   <body>
      <!-- Topbar Start -->
@@ -50,87 +67,20 @@
           <div class="col-md-6 text-center text-lg-end">
               <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
                   <div class="me-3 pe-3 border-end py-2">
-                      <p class="m-0"><i class="fa fa-envelope-open me-2"></i>dentcare@example.com</p>
+                      <p class="m-0"><i class="fa fa-envelope-open me-2"></i>nhakhoaapec@gmail.com</p>
                   </div>
                   <div class="py-2">
-                      <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
+                      <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+0909 902 626</p>
                   </div>
               </div>
           </div>
       </div>
   </div>
   <!-- Topbar End -->
-    {% comment %} <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
-              >
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav> {% endcomment %}
-
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+    {% comment %} <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
       <a href="" class="navbar-brand p-0">
-          <h1 class="m-4 text-primary"><i class="fa fa-tooth me-2"></i>Apec</h1>
+          <h1 class="m-1 text-primary"><i class="fa fa-tooth me-2"></i>DentalHealth</h1>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
@@ -156,154 +106,62 @@
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-          </div>
-          <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-          <a href="" class="btn btn-primary py-2 px-4 ms-3">Appointment</a>
+          </div> 
+          <a href="" class="btn btn-primary py-2 px-4 ms-3" style="min-width: 105px">Đặt lịch</a>
+          <a href="" class="btn btn-outline-primary py-2 px-4 ms-3" style="min-width: 130px">Đăng nhập</a>
       </div>
-  </nav>
+    </nav> {% endcomment %}
   <!-- Navbar End -->
+   
+  <div class="home-header-container">
+    <div class="home-header-content">
+      <div class="left-content">
+        <img class="bt-dautrang" height="40" src="{% static "website/img/logo/logo-dentalhealth.png"%}" alt="DentalHealth/">
+      </div>
+      <div class="center-content">
+        <div className='child-content'> 
+            <div><b>Giới thiệu</b></div>
+            <div className='subs-title'>Về DentalHealth</div>
+        </div>
+        <div className='child-content'> 
+            <div><b>Cẩm nang</b></div>
+            <div className='subs-title'>Chăm sóc răng miệng</div>
+        </div>
+        <div className='child-content'> 
+            <div><b>Phòng nha</b></div>
+            <div className='subs-title'>Nha khoa uy tín</div>
+        </div>
+        <div className='child-content'> 
+            <div><b>Liên hệ</b></div>
+            <div className='subs-title'>Liên hệ hợp tác</div>
+        </div>
+      </div>
+      <div class="right-content">
+        <a href="" class="btn btn-primary py-2 px-4 ms-3" style="min-width: 105px">Đặt lịch</a>
+        <a href="" class="btn btn-outline-primary py-2 px-4 ms-3" style="min-width: 130px">Đăng nhập</a>
+      </div>
+    </div>
+  </div>
+  {% comment %} <div className='home-header-banner'>
+    <div className='content-up'>
+          <div className='title1'>
+              Chuyên nha khoa
+          </div>
+          <div className='title2'>
+              hehe
+          </div>
+          <div className='search'>
+              <i className='fas fa-search'></i>
+              <input type='text' placeholder='Tìm chuyên khoa khám bệnh'/>
+          </div>
+      </div>
+  </div> {% endcomment %}
     {% block banner-slider%} {% endblock banner-slider%}
+    
+    
     <!--main body-->
     {% block main-content %}{% endblock main-content %}
 
-    <!--footer-->
-    {% comment %} <footer
-      class="text-center text-lg-start text-white"
-      style="background-color: #1c2331; width: 100%; position: fixed; bottom: 0"
-    >
-      <!-- Section: Social media -->
-      <section
-        class="d-flex justify-content-between p-4"
-        style="background-color: #6351ce"
-      >
-        <!-- Left -->
-        <div class="me-5">
-          <span>Get connected with us on social networks:</span>
-        </div>
-        <!-- Left -->
-
-        <!-- Right -->
-        <div>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-        <!-- Right -->
-      </section>
-      <!-- Section: Social media -->
-
-      <!-- Section: Links  -->
-      <section class="">
-        <div class="container text-center text-md-start mt-5">
-          <!-- Grid row -->
-          <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="text-uppercase fw-bold">Company name</h6>
-              <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-              />
-              <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Products</h6>
-              <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-              />
-              <p>
-                <a href="#!" class="text-white">MDBootstrap</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">MDWordPress</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">BrandFlow</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">Bootstrap Angular</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Useful links</h6>
-              <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-              />
-              <p>
-                <a href="#!" class="text-white">Your Account</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">Become an Affiliate</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">Shipping Rates</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">Help</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Contact</h6>
-              <hr
-                class="mb-4 mt-0 d-inline-block mx-auto"
-                style="width: 60px; background-color: #7c4dff; height: 2px"
-              />
-              <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-              <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-            </div>
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row -->
-        </div>
-      </section>
-      <!-- Section: Links  -->
-
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/"
-          >MDBootstrap.com</a
-        >
-      </div>
-      <!-- Copyright -->
-    </footer> {% endcomment %}
-    <!-- End of Footer -->
      <!-- Footer Start -->
      <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: 0px;">
       <div class="container">
@@ -330,9 +188,10 @@
               </div>
               <div class="col-lg-3 col-md-6">
                   <h3 class="text-white mb-4">Get In Touch</h3>
-                  <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>13 Oval Rd, London NW1 7EA, United Kingdom</p>
-                  <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>dentcare@example.com</p>
-                  <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+012 345 67890</p>
+                  <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Địa chỉ 1: 359C – 359D Đỗ Xuân Hợp, Phường Phước Long B – TP. Thủ Đức, TP. HCM</p>
+                  <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Địa chỉ 2: A3 – A4 Số 99 Lê Văn Việt, Phường Tăng Nhơn Phú A, TP. Thủ Đức, TP.HCM</p>
+                  <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>nhakhoaapec@gmail.com</p>
+                  <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+0909 902 626</p>
               </div>
               <div class="col-lg-3 col-md-6">
                   <h3 class="text-white mb-4">Follow Us</h3>
@@ -350,10 +209,10 @@
       <div class="container">
           <div class="row g-0">
               <div class="col-md-6 text-center text-md-start">
-                  <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">DentCare</a>. All Rights Reserved.</p>
+                  <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">Apec</a>. All Rights Reserved.</p>
               </div>
               <div class="col-md-6 text-center text-md-end">
-                  <p class="mb-0">Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
+                  <p class="mb-0">Designed by <a class="text-white border-bottom" href="https://github.com/phatdat20905/django-dental-clinic">NgoPhatDat</a></p>
               </div>
           </div>
       </div>
@@ -361,5 +220,7 @@
   <!-- Footer End -->
   <!--- *** Footer Area End *** -->
     <script src="" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{% static 'website/js/home.js'%}" defer></script>
   </body>
 </html>
