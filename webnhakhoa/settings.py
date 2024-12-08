@@ -74,13 +74,35 @@ WSGI_APPLICATION = 'webnhakhoa.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mssql',
+#         'NAME': 'webnhakhoa',
+#         'USER': '',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '1433',
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 17 for SQL Server',
+#             'Trusted_Connection': 'yes',
+#         },
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        "ENGINE": "mssql",
+        "NAME": "webnhakhoa",
+        "USER": "sa",
+        "PASSWORD": "123456",
+        "HOST": "localhost",
+        "PORT": "1433",
+        "OPTIONS": {
+            "driver": "ODBC Driver 17 for SQL Server", 
+            "trusted_connection": "yes",
+        }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
